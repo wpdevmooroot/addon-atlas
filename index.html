@@ -475,7 +475,7 @@ const FR = {
   select_ph:'Choisir…', cat_epargne:'Épargne', cat_fiscalite:'Fiscalité', cat_immobilier:'Immobilier', cat_marches:'Marchés', cat_succession:'Succession', cat_retraite:'Retraite',
   err_required:'Ce champ est obligatoire.', err_slug_format:'Lettres minuscules, chiffres et tirets uniquement.', err_slug_taken:'Ce slug est déjà utilisé.',
   err_date:'Date invalide (format attendu : AAAA-MM-JJ).', err_too_long:'{n} caractères : {max} maximum.', err_number:'Nombre invalide (ex. 1 482,37).',
-  err_pct:'Pourcentage invalide (ex. +3,25).', err_srri:'Le SRRI doit être un entier de 1 à 7.', err_text:'Texte requis (120 caractères maximum).',
+  err_srri:'Le SRRI doit être un entier de 1 à 7.', err_text:'Texte requis (120 caractères maximum).',
   selected_articles:'{n} {n|actualité sélectionnée|actualités sélectionnées}', blocked_errors:'Corrigez {n} {n|erreur|erreurs} pour continuer.', nothing_selected:'Rien à importer : cochez au moins une actualité.',
   confirm_articles:'Créer {n} {n|actualité|actualités}', modal_articles_title:'Créer {n} {n|actualité|actualités} en brouillon ?', modal_articles_text:'Elles seront créées en brouillon dans la collection « {coll} ». Rien n’est publié.',
   cancel:'Annuler', confirm:'Confirmer', working:'En cours…', close:'Fermer',
@@ -486,9 +486,9 @@ const FR = {
   confirm_fields:'Mettre à jour {x} {x|champ|champs}',
   modal_fields_title:'Mettre à jour les fiches OPCVM ?', done_fields_title:'Fiches OPCVM mises à jour', f_perf_ytd:'Performance YTD', f_perf_1y:'Performance 1 an', f_perf_3y:'Performance 3 ans', f_fees:'Frais de gestion', f_benchmark:'Indice de référence', f_srri:'Risque (SRRI 1 à 7)', f_updated:'Date de mise à jour',
   unit_mad:'MAD', unit_pct:'%', unit_mmad:'M MAD',
-  settings_title:'Réglages — {tool}', settings_desc:'Prompt, fournisseur IA et contraintes de fichiers pour cet outil. Réservé aux utilisateurs ayant la permission « configure atlas capital ».',
+  settings_title:'Réglages — {tool}', settings_desc:'Prompt et contraintes de fichiers pour cet outil. Réservé aux utilisateurs ayant la permission « configure atlas capital ».',
   tool_lettre:'Lettre Patrimoniale', tool_opcvm:'OPCVM', tool_switch:'Outil', tabs_label:'Sections des réglages',
-  tab_prompt:'Prompt', tab_provider:'Fournisseur', tab_files:'Fichiers', unsaved:'Modifications non enregistrées', all_saved:'Tout est enregistré', save:'Enregistrer',
+  tab_prompt:'Prompt', tab_files:'Fichiers', unsaved:'Modifications non enregistrées', all_saved:'Tout est enregistré', save:'Enregistrer',
   saved_toast:'Réglages enregistrés.', save_blocked:'Corrigez les erreurs avant d’enregistrer.',
   reset_default:'Réinitialiser par défaut', reset_title:'Réinitialiser le prompt ?', reset_text:'Le prompt actuel sera remplacé par le prompt par défaut fourni avec l’addon. Cette action est enregistrée immédiatement.',
   reset_confirm:'Réinitialiser', reset_toast:'Prompt par défaut rétabli.', test_prompt:'Tester le prompt',
@@ -496,15 +496,12 @@ const FR = {
   ph_title:'Variables disponibles', ph_help:'Cliquez sur une variable pour l’insérer à la position du curseur.',
   ph_schema:'Schéma JSON attendu, généré depuis le blueprint.', ph_file_content:'Texte extrait du PDF ou lignes du tableur.', ph_collection_fields:'Liste lisible des champs (type, obligatoire, valeurs).',
   inserted:'{ph} inséré.', schema_title:'Schéma JSON généré depuis le blueprint', schema_help:'Lecture seule : modifiez le blueprint pour changer le schéma.',
-  test_title:'Test du prompt', test_sample:'Fichier d’exemple : {name}', test_step1:'Extraction du texte du fichier…', test_step2:'Appel au modèle {model}…', test_step3:'Validation du JSON contre le schéma…',
+  test_title:'Test du prompt', test_sample:'Fichier d’exemple : {name}', test_step1:'Extraction du texte du fichier…', test_step2:'Appel à l’IA…', test_step3:'Validation du JSON contre le schéma…',
   test_valid:'JSON valide', test_invalid:'Réponse invalide', test_invalid_detail:'Du texte entoure le JSON et des champs obligatoires manquent. Ajoutez la consigne « réponds uniquement en JSON valide » et la variable {{schema}}.',
   test_nothing_saved:'Test à blanc : rien n’a été enregistré.', test_toast_ok:'Test terminé : JSON valide.', test_toast_ko:'Test terminé : réponse invalide.', test_running:'Test en cours…',
-  provider:'Fournisseur IA', model:'Modèle', api_key:'Clé API', api_key_help:'Stockée dans .env (AI_IMPORT_API_KEY). Elle n’est jamais affichée en entier.', modify:'Modifier',
-  key_new:'Nouvelle clé API', key_apply:'Valider', key_invalid:'Clé invalide : elle doit commencer par « sk- » et contenir au moins 12 caractères.', key_updated:'Nouvelle clé prise en compte : pensez à enregistrer.',
-  queue:'File d’attente (queue)', queue_help:'Nom de la queue Laravel utilisée par les jobs (AI_IMPORT_QUEUE).', max_size:'Taille maximale par fichier (Mo)', max_help:'Appliquée à l’upload et rappelée dans la zone de dépôt.',
+  max_size:'Taille maximale par fichier (Mo)', max_help:'Appliquée à l’upload et rappelée dans la zone de dépôt.',
   allowed_types:'Types de fichiers acceptés', allowed_help:'Définis par l’outil, non modifiables.', collection:'Handle de la collection cible', blueprint:'Handle du blueprint',
-  handle_help:'Lettres minuscules, chiffres et « _ ».', err_max_mb:'Valeur attendue : entre 1 et 200 Mo.', err_handle:'Lettres minuscules, chiffres et « _ » uniquement.', err_queue:'Nom de queue requis (lettres, chiffres, - _ .).',
-  kb:'Ko', mb:'Mo',
+  handle_help:'Lettres minuscules, chiffres et « _ ».', err_max_mb:'Valeur attendue : entre 1 et 200 Mo.', err_handle:'Lettres minuscules, chiffres et « _ » uniquement.', kb:'Ko', mb:'Mo',
   opcvm_desc:'Préparez le fichier avec le prompt, importez le fichier Excel ACM, puis laissez l’addon formater les données, sauvegarder, mettre à jour le graphique et les fiches OPCVM (FR et EN).',
   drop_hint_opcvm:'Excel (.xlsx) uniquement · {max} Mo maximum par fichier',
   ostep_import:'Importer le fichier Excel', ostep_format:'Formater les données', ostep_backup:'Préparer la mise à jour', ostep_update:'Mettre à jour les fiches',
@@ -529,8 +526,9 @@ const FR = {
   chart_title:'Graphique de performance', chart_text:'Le graphique de chaque fiche est alimenté par le CSV formaté (Date VL, VL, Indice).', chart_new:'{n} nouveaux points du {from} au {to}',
   chart_update:'Mettre à jour le graphique avec les nouvelles données', chart_label:'Évolution de {fund} : VL et indice {idx}, base 100. {n} nouveaux points.', chart_vl:'VL (base 100)', chart_idx:'Indice {idx} (base 100)', chart_new_zone:'Nouvelles données', chart_fund:'Fonds affiché',
   continue_update:'Continuer vers la mise à jour',
+  f_date:'Date', f_actif_net:'Actif NET', f_vl:'VL', f_ftp:'FTP - {p}', f_idx:'Indice de référence - {p}', p_ytd:'YTD', p_years:'{n} {n|an|ans}',
+  err_pct:'Pourcentage invalide : nombre sans « % » ni « + », virgule décimale (ex. 2,69 ou -1,20).', err_date_fr:'Date invalide (format attendu : JJ/MM/AAAA).',
   upd_apply:'Appliquer à', group_main:'Valeur liquidative et actif', group_ftp:'Performances du fonds (FTP)', group_idx:'Indice de référence', hint_vl:'Dernière valeur de la colonne VL (bas du fichier).',
-  f_vl:'VL', f_vl_date:'Date', f_aum:'Actif net', f_ftp:'FTP {n} {n|an|ans}', f_idx:'Indice de référence {n} {n|an|ans}',
   rep_title:'Reporting mensuel', rep_current:'Actuel : {name}', rep_new:'Nouveau : {name}', rep_upload:'Téléverser le nouveau reporting (PDF)', rep_sample:'Utiliser le fichier d’exemple', rep_remove:'Retirer',
   rep_keep:'Aucun nouveau reporting : le fichier actuel sera conservé.', rep_pdf_only:'Le reporting doit être un PDF.', rep_added:'Reporting « {name} » ajouté.', rep_label:'Nouveau reporting pour {fund}',
   no_locale:'Sélectionnez au moins une langue pour « {fund} ».',
@@ -590,7 +588,7 @@ const EN = {
   select_ph:'Choose…', cat_epargne:'Savings', cat_fiscalite:'Tax', cat_immobilier:'Real estate', cat_marches:'Markets', cat_succession:'Estate planning', cat_retraite:'Retirement',
   err_required:'This field is required.', err_slug_format:'Lowercase letters, digits and hyphens only.', err_slug_taken:'This slug is already in use.',
   err_date:'Invalid date (expected format: YYYY-MM-DD).', err_too_long:'{n} characters: {max} maximum.', err_number:'Invalid number (e.g. 1 482,37).',
-  err_pct:'Invalid percentage (e.g. +3,25).', err_srri:'SRRI must be an integer from 1 to 7.', err_text:'Text required (120 characters max).',
+  err_srri:'SRRI must be an integer from 1 to 7.', err_text:'Text required (120 characters max).',
   selected_articles:'{n} {n|article|articles} selected', blocked_errors:'Fix {n} {n|error|errors} to continue.', nothing_selected:'Nothing to import: tick at least one article.',
   confirm_articles:'Create {n} {n|entry|entries}', modal_articles_title:'Create {n} draft news {n|entry|entries}?', modal_articles_text:'They will be created as drafts in the “{coll}” collection. Nothing is published.',
   cancel:'Cancel', confirm:'Confirm', working:'Working…', close:'Close',
@@ -601,9 +599,9 @@ const EN = {
   confirm_fields:'Update {x} {x|field|fields}',
   modal_fields_title:'Update the OPCVM entries?', done_fields_title:'OPCVM entries updated', f_perf_ytd:'YTD performance', f_perf_1y:'1-year performance', f_perf_3y:'3-year performance', f_fees:'Management fees', f_benchmark:'Benchmark', f_srri:'Risk (SRRI 1 to 7)', f_updated:'Last updated',
   unit_mad:'MAD', unit_pct:'%', unit_mmad:'M MAD',
-  settings_title:'Settings — {tool}', settings_desc:'Prompt, AI provider and file constraints for this tool. Restricted to users with the “configure atlas capital” permission.',
+  settings_title:'Settings — {tool}', settings_desc:'Prompt and file constraints for this tool. Restricted to users with the “configure atlas capital” permission.',
   tool_lettre:'Lettre Patrimoniale', tool_opcvm:'OPCVM', tool_switch:'Tool', tabs_label:'Settings sections',
-  tab_prompt:'Prompt', tab_provider:'Provider', tab_files:'Files', unsaved:'Unsaved changes', all_saved:'All changes saved', save:'Save',
+  tab_prompt:'Prompt', tab_files:'Files', unsaved:'Unsaved changes', all_saved:'All changes saved', save:'Save',
   saved_toast:'Settings saved.', save_blocked:'Fix the errors before saving.',
   reset_default:'Reset to default', reset_title:'Reset the prompt?', reset_text:'The current prompt will be replaced with the default prompt shipped with the addon. This is saved immediately.',
   reset_confirm:'Reset', reset_toast:'Default prompt restored.', test_prompt:'Test prompt',
@@ -611,15 +609,12 @@ const EN = {
   ph_title:'Available placeholders', ph_help:'Click a placeholder to insert it at the cursor.',
   ph_schema:'Expected JSON schema, generated from the blueprint.', ph_file_content:'Text extracted from the PDF or spreadsheet rows.', ph_collection_fields:'Readable field list (type, required, allowed values).',
   inserted:'{ph} inserted.', schema_title:'JSON schema generated from the blueprint', schema_help:'Read-only: edit the blueprint to change the schema.',
-  test_title:'Prompt test', test_sample:'Sample file: {name}', test_step1:'Extracting text from the file…', test_step2:'Calling model {model}…', test_step3:'Validating JSON against the schema…',
+  test_title:'Prompt test', test_sample:'Sample file: {name}', test_step1:'Extracting text from the file…', test_step2:'Calling the AI…', test_step3:'Validating JSON against the schema…',
   test_valid:'Valid JSON', test_invalid:'Invalid response', test_invalid_detail:'Text surrounds the JSON and required fields are missing. Add a “reply only with valid JSON” instruction and the {{schema}} placeholder.',
   test_nothing_saved:'Dry run: nothing was saved.', test_toast_ok:'Test finished: valid JSON.', test_toast_ko:'Test finished: invalid response.', test_running:'Running test…',
-  provider:'AI provider', model:'Model', api_key:'API key', api_key_help:'Stored in .env (AI_IMPORT_API_KEY). Never displayed in full.', modify:'Change',
-  key_new:'New API key', key_apply:'Apply', key_invalid:'Invalid key: it must start with “sk-” and be at least 12 characters long.', key_updated:'New key applied: remember to save.',
-  queue:'Queue name', queue_help:'Laravel queue used by the jobs (AI_IMPORT_QUEUE).', max_size:'Max file size (MB)', max_help:'Enforced on upload and shown in the drop zone.',
+  max_size:'Max file size (MB)', max_help:'Enforced on upload and shown in the drop zone.',
   allowed_types:'Accepted file types', allowed_help:'Defined by the tool, read-only.', collection:'Target collection handle', blueprint:'Blueprint handle',
-  handle_help:'Lowercase letters, digits and “_”.', err_max_mb:'Expected a value between 1 and 200 MB.', err_handle:'Lowercase letters, digits and “_” only.', err_queue:'Queue name required (letters, digits, - _ .).',
-  kb:'KB', mb:'MB',
+  handle_help:'Lowercase letters, digits and “_”.', err_max_mb:'Expected a value between 1 and 200 MB.', err_handle:'Lowercase letters, digits and “_” only.', kb:'KB', mb:'MB',
   opcvm_desc:'Prepare the file with the prompt, import the ACM Excel file, then let the addon format the data, back up, update the chart and the OPCVM entries (FR and EN).',
   drop_hint_opcvm:'Excel (.xlsx) only · {max} MB max per file',
   ostep_import:'Import the Excel file', ostep_format:'Format the data', ostep_backup:'Prepare the update', ostep_update:'Update the entries',
@@ -644,8 +639,9 @@ const EN = {
   chart_title:'Performance chart', chart_text:'Each entry’s chart is fed by the formatted CSV (Date VL, VL, Index).', chart_new:'{n} new points from {from} to {to}',
   chart_update:'Update the chart with the new data', chart_label:'{fund}: NAV and {idx} index, rebased to 100. {n} new points.', chart_vl:'NAV (base 100)', chart_idx:'{idx} index (base 100)', chart_new_zone:'New data', chart_fund:'Fund shown',
   continue_update:'Continue to the update',
+  f_date:'Date', f_actif_net:'Net assets (Actif NET)', f_vl:'NAV (VL)', f_ftp:'FTP - {p}', f_idx:'Benchmark - {p}', p_ytd:'YTD', p_years:'{n} {n|year|years}',
+  err_pct:'Invalid percentage: number without “%” or “+”, decimal comma (e.g. 2,69 or -1,20).', err_date_fr:'Invalid date (expected format: DD/MM/YYYY).',
   upd_apply:'Apply to', group_main:'NAV and net assets', group_ftp:'Fund performance (FTP)', group_idx:'Benchmark index', hint_vl:'Last value of the VL column (bottom of the file).',
-  f_vl:'NAV (VL)', f_vl_date:'Date', f_aum:'Net assets', f_ftp:'FTP {n} {n|year|years}', f_idx:'Benchmark {n} {n|year|years}',
   rep_title:'Monthly report', rep_current:'Current: {name}', rep_new:'New: {name}', rep_upload:'Upload the new report (PDF)', rep_sample:'Use the sample file', rep_remove:'Remove',
   rep_keep:'No new report: the current file is kept.', rep_pdf_only:'The report must be a PDF.', rep_added:'Report “{name}” added.', rep_label:'New report for {fund}',
   no_locale:'Select at least one language for “{fund}”.',
@@ -700,14 +696,17 @@ const SAMPLE_LETTRE = [
   { name:'Lettre-Patrimoniale-hors-serie-retraite.pdf', size:1258291, articles:[4,5,6] }
 ];
 
+const PERIODS = ['ytd', 1, 2, 3, 4, 5];
+const pkey = (p) => (p === 'ytd' ? 'ytd' : `${p}y`);
 const OPCVM_FIELDS = [
-  { key:'vl_date', label:'f_vl_date', type:'date', group:'main' },
+  { key:'date', label:'f_date', type:'date', group:'main' },
+  { key:'actif_net', label:'f_actif_net', unit:'unit_mad', type:'number', group:'main' },
   { key:'vl', label:'f_vl', unit:'unit_mad', type:'number', group:'main', hint:'hint_vl' },
-  { key:'aum', label:'f_aum', unit:'unit_mmad', type:'number', group:'main' },
-  ...[1, 2, 3, 4, 5].map((n) => ({ key:`ftp_${n}y`, label:'f_ftp', n, unit:'unit_pct', type:'pct', group:'ftp' })),
-  ...[1, 2, 3, 4, 5].map((n) => ({ key:`idx_${n}y`, label:'f_idx', n, unit:'unit_pct', type:'pct', group:'idx' }))
+  ...PERIODS.map((n) => ({ key:`ftp_${pkey(n)}`, label:'f_ftp', n, unit:'unit_pct', type:'pct', group:'ftp' })),
+  ...PERIODS.map((n) => ({ key:`idx_${pkey(n)}`, label:'f_idx', n, unit:'unit_pct', type:'pct', group:'idx' }))
 ];
-const fieldLabel = (fd) => t(fd.label, { n:fd.n || 0 });
+const fieldLabel = (fd) => t(fd.label, { p:fd.n === 'ytd' ? t('p_ytd') : t('p_years', { n:fd.n || 0 }) });
+const isoToFr = (iso) => { const [y, m, d] = iso.split('-'); return `${d}/${m}/${y}`; };
 
 /* Deterministic fake NAV / index history (business days), so the chart and values stay consistent. */
 function seeded(str) { let h = 2166136261; for (const c of str) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return () => { h += 0x6D2B79F5; let x = h; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; }; }
@@ -720,28 +719,36 @@ function makeSeries(id, vl0, idx0, drift, vol) {
 }
 const frNum = (n, d = 2) => { const [i, f] = Number(n).toFixed(d).split('.'); return `${i.replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}${f ? ',' + f : ''}`; };
 const OPCVM_SEED = [
-  { id:'atlas-actions-maroc', title:'Atlas Actions Maroc', idx:'MASI', vl0:1360, idx0:15900, drift:0.0004, vol:0.012, aum:'2 315,8', ftp:['+11,05', '+18,40', '+24,60', '+31,20', '+42,15'], ind:['+10,12', '+16,85', '+22,30', '+28,90', '+38,40'] },
-  { id:'atlas-obligataire-ct', title:'Atlas Obligataire CT', idx:'MBI CT', vl0:1088, idx0:1180, drift:0.00012, vol:0.0012, aum:'4 870,2', ftp:['+3,48', '+6,95', '+9,12', '+11,80', '+14,95'], ind:['+3,21', '+6,40', '+8,65', '+11,02', '+13,90'] },
-  { id:'atlas-monetaire', title:'Atlas Monétaire', idx:'MONIA', vl0:209.6, idx0:104.2, drift:0.0001, vol:0.0004, aum:'6 104,5', ftp:['+2,81', '+5,60', '+8,02', '+10,30', '+12,70'], ind:['+2,74', '+5,48', '+7,90', '+10,15', '+12,52'] },
-  { id:'atlas-diversifie-prudent', title:'Atlas Diversifié Prudent', idx:'20 % MASI + 80 % MBI MT', vl0:332, idx0:255, drift:0.0002, vol:0.004, aum:'912,4', ftp:['+5,22', '+9,10', '+12,75', '+15,40', '+19,80'], ind:['+4,95', '+8,70', '+12,10', '+14,85', '+18,95'] },
-  { id:'atlas-obligataire-mlt', title:'Atlas Obligataire MLT', idx:'MBI MLT', vl0:1830, idx0:1405, drift:0.00018, vol:0.002, aum:'1 640,0', ftp:['+5,90', '+9,85', '+13,40', '+16,10', '+20,45'], ind:['+5,61', '+9,40', '+12,95', '+15,70', '+19,80'] },
-  { id:'atlas-actions-croissance', title:'Atlas Actions Croissance', idx:'MASI', vl0:552, idx0:15900, drift:0.00045, vol:0.014, aum:'780,9', ftp:['+13,60', '+21,30', '+28,95', '+35,10', '+47,80'], ind:['+10,12', '+16,85', '+22,30', '+28,90', '+38,40'] }
+  { id:'atlas-actions-maroc', title:'Atlas Actions Maroc', idx:'MASI', vl0:1360, idx0:15900, drift:0.0004, vol:0.012, actif_net:'2 315 804 112,40',
+    ftp:['8,42', '11,05', '18,40', '24,60', '31,20', '42,15'], ind:['7,90', '10,12', '16,85', '22,30', '28,90', '38,40'] },
+  { id:'atlas-obligataire-ct', title:'Atlas Obligataire CT', idx:'MBI CT', vl0:1088, idx0:1180, drift:0.00012, vol:0.0012, actif_net:'4 870 215 330,92',
+    ftp:['2,91', '3,48', '6,95', '9,12', '11,80', '14,95'], ind:['2,70', '3,21', '6,40', '8,65', '11,02', '13,90'] },
+  // Matches the real OPCVM box shared from the site (VL 147,36 on 13/11/2026); here as last month's values.
+  { id:'atlas-monetaire', title:'Atlas Monétaire', idx:'MONIA', vl0:143.6, idx0:104.2, drift:0.0001, vol:0.0004, lastVl:147.36, actif_net:'335 912 447,08',
+    ftp:['2,48', '2,64', '5,81', '9,79', '', ''], ind:['', '2,28', '4,90', '8,29', '', ''] },
+  { id:'atlas-diversifie-prudent', title:'Atlas Diversifié Prudent', idx:'20 % MASI + 80 % MBI MT', vl0:332, idx0:255, drift:0.0002, vol:0.004, actif_net:'912 406 781,25',
+    ftp:['4,10', '5,22', '9,10', '12,75', '15,40', '19,80'], ind:['3,85', '4,95', '8,70', '12,10', '14,85', '18,95'] },
+  { id:'atlas-obligataire-mlt', title:'Atlas Obligataire MLT', idx:'MBI MLT', vl0:1830, idx0:1405, drift:0.00018, vol:0.002, actif_net:'1 640 027 553,10',
+    ftp:['4,86', '5,90', '9,85', '13,40', '16,10', '20,45'], ind:['4,52', '5,61', '9,40', '12,95', '15,70', '19,80'] },
+  { id:'atlas-actions-croissance', title:'Atlas Actions Croissance', idx:'MASI', vl0:552, idx0:15900, drift:0.00045, vol:0.014, actif_net:'780 912 004,66',
+    ftp:['10,15', '13,60', '21,30', '28,95', '', ''], ind:['8,85', '10,12', '16,85', '22,30', '', ''] }
 ];
 const OPCVM_ENTRIES = OPCVM_SEED.map((e) => {
-  const full = makeSeries(e.id, e.vl0, e.idx0, e.drift, e.vol);
+  let full = makeSeries(e.id, e.vl0, e.idx0, e.drift, e.vol);
+  if (e.lastVl) { const k = e.lastVl / full[full.length - 1].vl; full = full.map((p) => ({ ...p, vl:+(p.vl * k).toFixed(2) })); }
   const series = full.filter((p) => p.date <= CUTOFF);
   const last = series[series.length - 1];
-  const values = { vl_date:last.date, vl:frNum(last.vl), aum:e.aum };
-  e.ftp.forEach((v, i) => { values[`ftp_${i + 1}y`] = v; });
-  e.ind.forEach((v, i) => { values[`idx_${i + 1}y`] = v; });
+  const values = { date:isoToFr(last.date), actif_net:e.actif_net, vl:frNum(last.vl) };
+  PERIODS.forEach((n, i) => { values[`ftp_${pkey(n)}`] = e.ftp[i]; values[`idx_${pkey(n)}`] = e.ind[i]; });
   return { id:e.id, title:e.title, idx:e.idx, values, series, full, reporting:`Reporting-${e.title.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, '-')}-octobre-2026.pdf` };
 });
-// AI output for the sample ACM file (one object per sheet). Monétaire carries two invalid values on purpose.
+// AI output for the sample ACM file, in the site's formats. Monétaire = the real values from the site;
+// Diversifié Prudent carries two invalid values on purpose (« n.d. », « 4,9 pts »).
 const ACM_SAMPLE_AI = {
-  'atlas-actions-maroc':{ aum:'2 341,6', ftp:['+11,72', '+18,95', '+24,60', '+31,55', '+42,80'], ind:['+10,40', '+17,02', '+22,30', '+29,10', '+38,75'] },
-  'atlas-obligataire-ct':{ aum:'4 912,7', ftp:['+3,52', '+7,01', '+9,20', '+11,80', '+15,02'], ind:['+3,25', '+6,44', '+8,71', '+11,02', '+13,96'] },
-  'atlas-monetaire':{ aum:'6 230,1', ftp:['+2,84', '+5,63', '+8,05', '+10,33', 'n.d.'], ind:['+2,76', '2,9 pts', '+7,92', '+10,18', '+12,55'] },
-  'atlas-diversifie-prudent':{ aum:'918,9', ftp:['+5,40', '+9,22', '+12,75', '+15,52', '+19,95'], ind:['+5,08', '+8,81', '+12,10', '+14,93', '+19,04'] }
+  'atlas-actions-maroc':{ actif_net:'2 341 622 958,15', ftp:['9,48', '11,72', '18,95', '24,60', '31,55', '42,80'], ind:['8,85', '10,40', '17,02', '22,30', '29,10', '38,75'] },
+  'atlas-obligataire-ct':{ actif_net:'4 912 708 114,36', ftp:['3,25', '3,52', '7,01', '9,20', '11,80', '15,02'], ind:['3,02', '3,25', '6,44', '8,71', '11,02', '13,96'] },
+  'atlas-monetaire':{ actif_net:'338 280 981,57', ftp:['2,69', '2,67', '5,87', '9,86', '', ''], ind:['', '2,31', '4,95', '8,34', '', ''] },
+  'atlas-diversifie-prudent':{ actif_net:'918 903 112,80', ftp:['4,32', '5,40', '9,22', '12,75', '15,52', 'n.d.'], ind:['4,05', '5,08', '4,9 pts', '12,10', '14,93', '19,04'] }
 };
 const SAMPLE_OPCVM = [
   { name:'ACM_VL_OPCVM_2026-11-14.xlsx', size:421888, sheets:[
@@ -789,19 +796,28 @@ Document :
 une feuille par fonds, une ligne par rangée, cellules séparées par « | »).
 
 Ta mission : pour chaque feuille, extraire la série de valeurs liquidatives
-et les indicateurs de la fiche OPCVM correspondante.
+et les 15 champs de la fiche OPCVM du site, au format affiché sur le site.
 
-Règles :
+Série (alimente le graphique) — "series" :
+- Colonnes Date VL, VL et Indice, à partir de la première ligne
+  où les trois colonnes sont remplies.
+- Dates au format AAAA-MM-JJ, nombres avec un point décimal (ex. 147.36).
+
+Champs de la fiche (texte, format du site) :
 - "_detected_name" : nom du fonds tel qu’il apparaît dans la feuille.
-- "series" : colonnes Date VL, VL et Indice (MASI, MONIA…), en commençant
-  à la première ligne où les trois colonnes sont remplies.
-- Dates au format AAAA-MM-JJ. Nombres avec un point décimal, sans espace
-  ni séparateur de milliers (ex. 1497.12).
-- "vl" : dernière valeur de la colonne VL (bas du fichier).
-- "aum" : actif net en millions de MAD.
-- "ftp_1y" à "ftp_5y" : performances du fonds sur 1 à 5 ans.
-- "idx_1y" à "idx_5y" : performances de l’indice de référence sur 1 à 5 ans.
-- N’invente aucune valeur : null si elle ne figure pas dans le fichier.
+- "date" : date de la dernière VL, format JJ/MM/AAAA (ex. 13/11/2026).
+- "actif_net" : actif net en MAD, montant complet, espace entre les
+  milliers, virgule décimale (ex. 338 280 981,57).
+- "vl" : dernière valeur de la colonne VL (bas du fichier),
+  virgule décimale (ex. 147,36).
+- "ftp_ytd", "ftp_1y", "ftp_2y", "ftp_3y", "ftp_4y", "ftp_5y" :
+  performance du fonds (FTP) depuis le début de l’année, puis sur 1 à 5 ans.
+- "idx_ytd", "idx_1y", "idx_2y", "idx_3y", "idx_4y", "idx_5y" :
+  performance de l’indice de référence sur les mêmes périodes.
+- Performances en %, sans le signe « % » ni « + », virgule décimale,
+  signe moins si négative (ex. 2,69 ou -1,20).
+- Valeur absente du fichier (fonds trop récent, période non publiée) : null.
+  N’invente, n’estime et ne calcule aucune valeur.
 
 Champs de la fiche OPCVM :
 {{collection_fields}}
@@ -821,16 +837,21 @@ const SCHEMAS = {
     title:{type:'string', description:'Titre'}, slug:{type:['string','null'], description:'Slug'}, date:{type:'string', format:'date'},
     excerpt:{type:'string', maxLength:300, description:'Chapô'}, content:{type:'string', contentMediaType:'text/html'},
     category:{type:'string', enum:CATEGORIES}, seo_title:{type:['string','null'], maxLength:60}, seo_description:{type:['string','null'], maxLength:160} } } } } },
-  opcvm: { type:'object', required:['funds'], properties:{ funds:{ type:'array', items:{ type:'object', required:['_detected_name', 'series'], properties:{
-    _detected_name:{ type:'string' }, series:{ type:'array', items:{ type:'object', required:['date', 'vl', 'index'], properties:{ date:{ type:'string', format:'date' }, vl:{ type:'number' }, index:{ type:'number' } } } },
-    vl_date:{ type:['string', 'null'], format:'date' }, vl:{ type:['number', 'null'], description:'Dernière VL (MAD)' }, aum:{ type:['number', 'null'], description:'Actif net (M MAD)' },
-    ftp_1y:{ type:['number', 'null'] }, ftp_2y:{ type:['number', 'null'] }, ftp_3y:{ type:['number', 'null'] }, ftp_4y:{ type:['number', 'null'] }, ftp_5y:{ type:['number', 'null'] },
-    idx_1y:{ type:['number', 'null'] }, idx_2y:{ type:['number', 'null'] }, idx_3y:{ type:['number', 'null'] }, idx_4y:{ type:['number', 'null'] }, idx_5y:{ type:['number', 'null'] } } } } } }
+  opcvm: { type:'object', required:['funds'], properties:{ funds:{ type:'array', items:{ type:'object', required:['_detected_name', 'series', 'date', 'vl'], properties:{
+    _detected_name:{ type:'string' },
+    series:{ type:'array', items:{ type:'object', required:['date', 'vl', 'index'], properties:{ date:{ type:'string', format:'date' }, vl:{ type:'number' }, index:{ type:'number' } } } },
+    date:{ type:'string', pattern:'^\\d{2}/\\d{2}/\\d{4}$', description:'Date — JJ/MM/AAAA' },
+    actif_net:{ type:['string', 'null'], description:'Actif NET — MAD, ex. 338 280 981,57' },
+    vl:{ type:'string', description:'VL — ex. 147,36' },
+    ftp_ytd:{ type:['string', 'null'], description:'FTP - YTD (%)' }, ftp_1y:{ type:['string', 'null'] }, ftp_2y:{ type:['string', 'null'] }, ftp_3y:{ type:['string', 'null'] }, ftp_4y:{ type:['string', 'null'] }, ftp_5y:{ type:['string', 'null'] },
+    idx_ytd:{ type:['string', 'null'], description:'Indice de référence - YTD (%)' }, idx_1y:{ type:['string', 'null'] }, idx_2y:{ type:['string', 'null'] }, idx_3y:{ type:['string', 'null'] }, idx_4y:{ type:['string', 'null'] }, idx_5y:{ type:['string', 'null'] } } } } } }
 };
 
 const TEST_RESULTS = {
   lettre: { articles:[ { title:'Assurance-vie : ce qui change en 2026', slug:'assurance-vie-ce-qui-change-en-2026', date:'2026-11-05', excerpt:'Fiscalité des rachats, nouvelles unités de compte, frais : tour d’horizon des évolutions.', content:'<p>L’assurance-vie reste le placement préféré des épargnants…</p>', category:'epargne', seo_title:'Assurance-vie 2026 : les changements à connaître', seo_description:null } ] },
-  opcvm: { funds:[ { _detected_name:'ATLAS ACTIONS MAROC', series:[ { date:'2026-11-13', vl:1494.85, index:18201.40 }, { date:'2026-11-14', vl:1497.12, index:18245.33 } ], vl_date:'2026-11-14', vl:1497.12, aum:2341.6, ftp_1y:11.72, ftp_2y:18.95, ftp_3y:24.6, ftp_4y:31.55, ftp_5y:42.8, idx_1y:10.4, idx_2y:17.02, idx_3y:22.3, idx_4y:29.1, idx_5y:38.75 } ] }
+  opcvm: { funds:[ { _detected_name:'ATLAS MONETAIRE', series:[ { date:'2026-11-12', vl:147.33, index:108.41 }, { date:'2026-11-13', vl:147.36, index:108.43 } ],
+    date:'13/11/2026', actif_net:'338 280 981,57', vl:'147,36', ftp_ytd:'2,69', ftp_1y:'2,67', ftp_2y:'5,87', ftp_3y:'9,86', ftp_4y:null, ftp_5y:null,
+    idx_ytd:null, idx_1y:'2,31', idx_2y:'4,95', idx_3y:'8,34', idx_4y:null, idx_5y:null } ] }
 };
 
 const MODELS = { anthropic:['claude-sonnet-5-5', 'claude-opus-5-5', 'claude-haiku-5-5'], openai:['gpt-4.1', 'gpt-4.1-mini'] };
@@ -1621,8 +1642,8 @@ const norm = (v) => String(v ?? '').replace(/\s| /g, '').replace(',', '.').toLo
 function validateValue(type, v) {
   const s = String(v ?? '').trim();
   if (type === 'number') { const n = Number(s.replace(/[\s ]/g, '').replace(',', '.')); return s && !isNaN(n) && n > 0 && /^[\d\s ]+(,\d+)?$/.test(s) ? null : { key:'err_number' }; }
-  if (type === 'pct') return /^[+-]?\d{1,3}(,\d{1,2})?$/.test(s) ? null : { key:'err_pct' };
-  if (type === 'date') return validDate(s) ? null : { key:'err_date' };
+  if (type === 'pct') return s === '' || /^-?\d{1,3}(,\d{1,2})?$/.test(s) ? null : { key:'err_pct' };
+  if (type === 'date') { const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(s); return m && validDate(`${m[3]}-${m[2]}-${m[1]}`) ? null : { key:'err_date_fr' }; }
   return s && s.length <= 120 ? null : { key:'err_text' };
 }
 const fmtDate = (iso) => { const [y, m, d] = iso.split('-'); return state.lang === 'fr' ? `${d}/${m}/${y}` : iso; };
@@ -1871,24 +1892,28 @@ const fmtDateFr = (iso) => { const [y, m, d] = iso.split('-'); return `${d}/${m}
 /* -------- values proposed by the AI for each fund */
 function fakeAi(entry) {
   const num = (v) => parseFloat(String(v).replace(/[\s ]/g, '').replace(',', '.'));
-  const pct = (v, d) => { const n = num(v); if (isNaN(n)) return v; const r = n + d; return `${r >= 0 ? '+' : ''}${r.toFixed(2).replace('.', ',')}`; };
-  const out = { aum:frNum(num(entry.values.aum) * 1.006, 1) };
-  for (let i = 1; i <= 5; i++) { out[`ftp_${i}y`] = i === 3 ? entry.values[`ftp_${i}y`] : pct(entry.values[`ftp_${i}y`], 0.21 * i); out[`idx_${i}y`] = i === 3 ? entry.values[`idx_${i}y`] : pct(entry.values[`idx_${i}y`], 0.17 * i); }
+  const pct = (v, d) => { if (v === '' || v == null) return ''; const n = num(v); if (isNaN(n)) return v; return (n + d).toFixed(2).replace('.', ','); };
+  const out = { actif_net:frNum(num(entry.values.actif_net) * 1.006) };
+  PERIODS.forEach((n, i) => {
+    out[`ftp_${pkey(n)}`] = i === 3 ? entry.values[`ftp_${pkey(n)}`] : pct(entry.values[`ftp_${pkey(n)}`], 0.21 * (i + 1));
+    out[`idx_${pkey(n)}`] = i === 3 ? entry.values[`idx_${pkey(n)}`] : pct(entry.values[`idx_${pkey(n)}`], 0.17 * (i + 1));
+  });
   return out;
 }
 function makeDiff(f) {
   const entry = state.entries.find((e) => e.id === f.target);
   const last = entry.full[entry.full.length - 1];
   const sample = f.sample && ACM_SAMPLE_AI[entry.id];
-  const ai = { vl_date:last.date, vl:frNum(last.vl), ...(sample ? { aum:sample.aum } : {}) };
-  if (sample) sample.ftp.forEach((v, i) => { ai[`ftp_${i + 1}y`] = v; }), sample.ind.forEach((v, i) => { ai[`idx_${i + 1}y`] = v; });
+  const ai = { date:isoToFr(last.date), vl:frNum(last.vl) };
+  if (sample) { ai.actif_net = sample.actif_net; PERIODS.forEach((n, i) => { ai[`ftp_${pkey(n)}`] = sample.ftp[i]; ai[`idx_${pkey(n)}`] = sample.ind[i]; }); }
   else Object.assign(ai, fakeAi(entry));
   f.series = entry.full;
   const rows = {};
   for (const fd of OPCVM_FIELDS) {
     const current = entry.values[fd.key] ?? '';
     const aiv = ai[fd.key] ?? '';
-    rows[fd.key] = { current, ai:aiv, accept:norm(current) !== norm(aiv) };
+    // An empty AI value never clears a filled field by default.
+    rows[fd.key] = { current, ai:aiv, accept:norm(current) !== norm(aiv) && aiv !== '' };
   }
   return { entryId:entry.id, rows };
 }
@@ -2145,7 +2170,7 @@ function focusMain() { $('#main').focus({ preventScroll:false }); window.scrollT
 function sDirty(tool) { const S = state.settings[tool]; return JSON.stringify(S.draft) !== JSON.stringify(S.saved); }
 function renderSettings(tool) {
   const S = state.settings[tool];
-  const tabs = ['prompt', 'provider', 'files'];
+  const tabs = ['prompt', 'files'];
   return `
     <div class="page-head">
       <div><h1>${esc(t('settings_title', { tool:t('tool_' + tool) }))}</h1><p class="lead">${esc(t('settings_desc'))}</p></div>
@@ -2160,7 +2185,6 @@ function renderSettings(tool) {
       ${tabs.map((k) => `<button type="button" role="tab" class="tab" id="tab-${k}" aria-controls="panel-${k}" aria-selected="${S.tab === k}" tabindex="${S.tab === k ? 0 : -1}" data-action="tab" data-tab="${k}" data-tool="${tool}">${esc(t('tab_' + k))}</button>`).join('')}
     </div>
     <div role="tabpanel" id="panel-prompt" aria-labelledby="tab-prompt" ${S.tab === 'prompt' ? '' : 'hidden'}>${promptTab(tool)}</div>
-    <div role="tabpanel" id="panel-provider" aria-labelledby="tab-provider" ${S.tab === 'provider' ? '' : 'hidden'}>${providerTab(tool)}</div>
     <div role="tabpanel" id="panel-files" aria-labelledby="tab-files" ${S.tab === 'files' ? '' : 'hidden'}>${filesTab(tool)}</div>`;
 }
 function dirtyHtml(tool) { return sDirty(tool) ? `<span class="dirty"><span class="dot"></span>${esc(t('unsaved'))}</span>` : `<span class="clean">${esc(t('all_saved'))}</span>`; }
@@ -2205,35 +2229,6 @@ function testPanel(tool) {
     <pre class="json mono">${esc(T.output)}</pre>
     <p class="notice">${I.shield}<span>${esc(t('test_nothing_saved'))}</span></p></div>`;
 }
-function providerTab(tool) {
-  const D = state.settings[tool].draft;
-  return `<section class="card"><div class="form-grid">
-    <div class="field"><label for="s-provider">${esc(t('provider'))}</label>
-      <select class="select" id="s-provider" data-change="setting" data-key="provider" data-tool="${tool}">
-        <option value="anthropic" ${D.provider === 'anthropic' ? 'selected' : ''}>Anthropic</option><option value="openai" ${D.provider === 'openai' ? 'selected' : ''}>OpenAI</option></select></div>
-    <div class="field"><label for="s-model">${esc(t('model'))}</label>
-      <select class="select mono" id="s-model" data-change="setting" data-key="model" data-tool="${tool}">${MODELS[D.provider].map((m) => `<option ${D.model === m ? 'selected' : ''}>${esc(m)}</option>`).join('')}</select></div>
-    <div class="field" style="grid-column:1/-1" id="key-block">${keyBlock(tool)}</div>
-    <div class="field"><label for="s-queue">${esc(t('queue'))}</label>
-      <input class="input mono" id="s-queue" type="text" value="${esc(D.queue)}" data-input="setting" data-key="queue" data-tool="${tool}" aria-describedby="s-queue-help serr-queue">
-      <p class="help" id="s-queue-help">${esc(t('queue_help'))}</p><p class="ferr" id="serr-queue"></p></div>
-  </div></section>`;
-}
-function keyBlock(tool) {
-  const S = state.settings[tool];
-  const masked = `••••••••sk-…${S.draft.keyLast4}`;
-  if (!S.editingKey) {
-    return `<span class="flabel" id="key-label">${esc(t('api_key'))}</span>
-      <div class="key-box" role="group" aria-labelledby="key-label"><code aria-label="${esc(t('api_key'))} : ${esc(masked)}">${esc(masked)}</code>
-        <button type="button" class="btn btn-sm" data-action="key-edit" data-tool="${tool}" style="margin-left:auto">${esc(t('modify'))}</button></div>
-      <p class="help">${esc(t('api_key_help'))}</p>`;
-  }
-  return `<label for="s-key">${esc(t('key_new'))}</label>
-    <div style="display:flex;gap:8px;flex-wrap:wrap"><input class="input mono" style="flex:1;min-width:200px" id="s-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-…" aria-describedby="key-err">
-      <button type="button" class="btn btn-primary" data-action="key-apply" data-tool="${tool}">${esc(t('key_apply'))}</button>
-      <button type="button" class="btn" data-action="key-cancel" data-tool="${tool}">${esc(t('cancel'))}</button></div>
-    <p class="ferr" id="key-err"></p><p class="help">${esc(t('api_key_help'))}</p>`;
-}
 function filesTab(tool) {
   const D = state.settings[tool].draft;
   const types = tool === 'lettre' ? ['PDF'] : ['XLSX'];
@@ -2259,8 +2254,7 @@ function validateSettings(tool) {
   if (!Number.isInteger(mb) || mb < 1 || mb > 200) e.maxMb = 'err_max_mb';
   if (!/^[a-z0-9_]+$/.test(D.collection)) e.collection = 'err_handle';
   if (!/^[a-z0-9_]+$/.test(D.blueprint)) e.blueprint = 'err_handle';
-  if (!/^[A-Za-z0-9_.-]+$/.test(D.queue)) e.queue = 'err_queue';
-  for (const k of ['maxMb', 'collection', 'blueprint', 'queue']) {
+  for (const k of ['maxMb', 'collection', 'blueprint']) {
     const el = $(`#serr-${k}`); if (el) el.innerHTML = e[k] ? `${I.alert}<span>${esc(t(e[k]))}</span>` : '';
     const input = $(`[data-key="${k}"]`); if (input) input.setAttribute('aria-invalid', e[k] ? 'true' : 'false');
   }
@@ -2458,19 +2452,10 @@ document.addEventListener('click', async (e) => {
       const errs = validateSettings(tool);
       if (Object.keys(errs).length) {
         toast(t('save_blocked'), 'error');
-        const tab = errs.maxMb || errs.collection || errs.blueprint ? 'files' : 'provider';
-        selectTab(tool, tab, false); validateSettings(tool); break;
+        selectTab(tool, 'files', false); validateSettings(tool); break;
       }
       const S = state.settings[tool];
       S.draft.maxMb = Number(S.draft.maxMb); S.saved = clone(S.draft); updateDirty(tool); toast(t('saved_toast')); break;
-    }
-    case 'key-edit': state.settings[tool].editingKey = true; $('#key-block').innerHTML = keyBlock(tool); $('#s-key').focus(); break;
-    case 'key-cancel': state.settings[tool].editingKey = false; $('#key-block').innerHTML = keyBlock(tool); $('[data-action="key-edit"]').focus(); break;
-    case 'key-apply': {
-      const v = $('#s-key').value.trim();
-      if (!/^sk-/.test(v) || v.length < 12) { $('#key-err').innerHTML = `${I.alert}<span>${esc(t('key_invalid'))}</span>`; $('#s-key').setAttribute('aria-invalid', 'true'); $('#s-key').focus(); break; }
-      const S = state.settings[tool]; S.draft.keyLast4 = v.slice(-4); S.editingKey = false;
-      $('#key-block').innerHTML = keyBlock(tool); $('[data-action="key-edit"]').focus(); updateDirty(tool); toast(t('key_updated'), 'info'); break;
     }
   }
 });
@@ -2543,7 +2528,6 @@ document.addEventListener('change', (e) => {
   else if (kind === 'accept') { const f = state.tools.opcvm.files.find((x) => x.id === el.dataset.id); f.diff.rows[el.dataset.key].accept = el.checked; refreshDiffs(); updateChrome('opcvm'); }
   else if (kind === 'setting') {
     const S = state.settings[el.dataset.tool]; S.draft[el.dataset.key] = el.value;
-    if (el.dataset.key === 'provider') { S.draft.model = MODELS[el.value][0]; $('#s-model').innerHTML = MODELS[el.value].map((m) => `<option ${S.draft.model === m ? 'selected' : ''}>${esc(m)}</option>`).join(''); }
     updateDirty(el.dataset.tool);
   } else if (el.dataset?.input === 'card' && el.tagName === 'SELECT') { const c = findCard(el.dataset.uid); c[el.dataset.field] = el.value; refreshArticles(); updateChrome('lettre'); }
 });
