@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Import — maquette Control Panel Statamic 6</title>
+<title>Atlas Capital — prototype Control Panel Statamic 6</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -428,12 +428,12 @@ const FR = {
   skip:'Aller au contenu', sidebar:'Navigation principale', nav_dashboard:'Tableau de bord', nav_content:'Contenu', nav_collections:'Collections',
   nav_actualites:'Actualités', nav_opcvm_coll:'OPCVM', nav_navigation:'Navigation', nav_taxonomies:'Taxonomies', nav_assets:'Assets',
   nav_tools:'Outils', nav_forms:'Formulaires', nav_updates:'Mises à jour', nav_utilities:'Utilitaires', nav_users:'Utilisateurs', nav_users_sec:'Utilisateurs',
-  nav_ai:'AI Import', nav_lettre:'Lettre Patrimoniale', nav_opcvm:'OPCVM', nav_settings:'Réglages',
-  menu_open:'Ouvrir le menu', menu_close:'Fermer le menu', breadcrumb:'Fil d’Ariane', bc_tools:'Outils', bc_ai:'AI Import', bc_settings:'Réglages',
+  nav_ai:'Atlas Capital', nav_lettre:'Lettre Patrimoniale', nav_opcvm:'OPCVM', nav_settings:'Réglages',
+  menu_open:'Ouvrir le menu', menu_close:'Fermer le menu', breadcrumb:'Fil d’Ariane', bc_tools:'Outils', bc_ai:'Atlas Capital', bc_settings:'Réglages',
   lang_label:'Langue', theme_dark:'Passer en mode sombre', theme_light:'Passer en mode clair', role_admin:'Admin', role_editor:'Éditeur',
   out_of_scope:'« {item} » : hors du périmètre de cette maquette.',
-  dev_title:'Panneau démo', dev_tag:'DEV', dev_role:'Rôle simulé', dev_role_editor:'Éditeur (use ai import)', dev_role_admin:'Admin (+ configure ai import)',
-  dev_reset:'Réinitialiser la démo', toast_reset:'Démo réinitialisée.', toast_forbidden:'Accès réservé aux utilisateurs ayant la permission « configure ai import ».',
+  dev_title:'Panneau démo', dev_tag:'DEV', dev_role:'Rôle simulé', dev_role_editor:'Éditeur (use atlas capital)', dev_role_admin:'Admin (+ configure atlas capital)',
+  dev_reset:'Réinitialiser la démo', toast_reset:'Démo réinitialisée.', toast_forbidden:'Accès réservé aux utilisateurs ayant la permission « configure atlas capital ».',
   role_changed:'Rôle simulé : {role}.',
   lettre_title:'Lettre Patrimoniale → Actualités', lettre_desc:'Préparez le document avec le prompt, importez vos Lettres Patrimoniales (PDF), puis validez les articles détectés par l’IA : chacun devient une actualité en brouillon.',
   step_prepare:'Préparer le document', step_import:'Importer les documents',
@@ -486,7 +486,7 @@ const FR = {
   confirm_fields:'Mettre à jour {x} {x|champ|champs}',
   modal_fields_title:'Mettre à jour les fiches OPCVM ?', done_fields_title:'Fiches OPCVM mises à jour', f_perf_ytd:'Performance YTD', f_perf_1y:'Performance 1 an', f_perf_3y:'Performance 3 ans', f_fees:'Frais de gestion', f_benchmark:'Indice de référence', f_srri:'Risque (SRRI 1 à 7)', f_updated:'Date de mise à jour',
   unit_mad:'MAD', unit_pct:'%', unit_mmad:'M MAD',
-  settings_title:'Réglages — {tool}', settings_desc:'Prompt, fournisseur IA et contraintes de fichiers pour cet outil. Réservé aux utilisateurs ayant la permission « configure ai import ».',
+  settings_title:'Réglages — {tool}', settings_desc:'Prompt, fournisseur IA et contraintes de fichiers pour cet outil. Réservé aux utilisateurs ayant la permission « configure atlas capital ».',
   tool_lettre:'Lettre Patrimoniale', tool_opcvm:'OPCVM', tool_switch:'Outil', tabs_label:'Sections des réglages',
   tab_prompt:'Prompt', tab_provider:'Fournisseur', tab_files:'Fichiers', unsaved:'Modifications non enregistrées', all_saved:'Tout est enregistré', save:'Enregistrer',
   saved_toast:'Réglages enregistrés.', save_blocked:'Corrigez les erreurs avant d’enregistrer.',
@@ -543,12 +543,12 @@ const EN = {
   skip:'Skip to content', sidebar:'Main navigation', nav_dashboard:'Dashboard', nav_content:'Content', nav_collections:'Collections',
   nav_actualites:'News', nav_opcvm_coll:'OPCVM', nav_navigation:'Navigation', nav_taxonomies:'Taxonomies', nav_assets:'Assets',
   nav_tools:'Tools', nav_forms:'Forms', nav_updates:'Updates', nav_utilities:'Utilities', nav_users:'Users', nav_users_sec:'Users',
-  nav_ai:'AI Import', nav_lettre:'Lettre Patrimoniale', nav_opcvm:'OPCVM', nav_settings:'Settings',
-  menu_open:'Open menu', menu_close:'Close menu', breadcrumb:'Breadcrumb', bc_tools:'Tools', bc_ai:'AI Import', bc_settings:'Settings',
+  nav_ai:'Atlas Capital', nav_lettre:'Lettre Patrimoniale', nav_opcvm:'OPCVM', nav_settings:'Settings',
+  menu_open:'Open menu', menu_close:'Close menu', breadcrumb:'Breadcrumb', bc_tools:'Tools', bc_ai:'Atlas Capital', bc_settings:'Settings',
   lang_label:'Language', theme_dark:'Switch to dark mode', theme_light:'Switch to light mode', role_admin:'Admin', role_editor:'Editor',
   out_of_scope:'“{item}”: out of scope for this mockup.',
-  dev_title:'Demo panel', dev_tag:'DEV', dev_role:'Simulated role', dev_role_editor:'Editor (use ai import)', dev_role_admin:'Admin (+ configure ai import)',
-  dev_reset:'Reset demo', toast_reset:'Demo reset.', toast_forbidden:'Only users with the “configure ai import” permission can open settings.',
+  dev_title:'Demo panel', dev_tag:'DEV', dev_role:'Simulated role', dev_role_editor:'Editor (use atlas capital)', dev_role_admin:'Admin (+ configure atlas capital)',
+  dev_reset:'Reset demo', toast_reset:'Demo reset.', toast_forbidden:'Only users with the “configure atlas capital” permission can open settings.',
   role_changed:'Simulated role: {role}.',
   lettre_title:'Lettre Patrimoniale → News', lettre_desc:'Prepare the document with the prompt, import your Lettre Patrimoniale files (PDF), then review the articles the AI detects: each one becomes a draft news entry.',
   step_prepare:'Prepare the document', step_import:'Import documents',
@@ -601,7 +601,7 @@ const EN = {
   confirm_fields:'Update {x} {x|field|fields}',
   modal_fields_title:'Update the OPCVM entries?', done_fields_title:'OPCVM entries updated', f_perf_ytd:'YTD performance', f_perf_1y:'1-year performance', f_perf_3y:'3-year performance', f_fees:'Management fees', f_benchmark:'Benchmark', f_srri:'Risk (SRRI 1 to 7)', f_updated:'Last updated',
   unit_mad:'MAD', unit_pct:'%', unit_mmad:'M MAD',
-  settings_title:'Settings — {tool}', settings_desc:'Prompt, AI provider and file constraints for this tool. Restricted to users with the “configure ai import” permission.',
+  settings_title:'Settings — {tool}', settings_desc:'Prompt, AI provider and file constraints for this tool. Restricted to users with the “configure atlas capital” permission.',
   tool_lettre:'Lettre Patrimoniale', tool_opcvm:'OPCVM', tool_switch:'Tool', tabs_label:'Settings sections',
   tab_prompt:'Prompt', tab_provider:'Provider', tab_files:'Files', unsaved:'Unsaved changes', all_saved:'All changes saved', save:'Save',
   saved_toast:'Settings saved.', save_blocked:'Fix the errors before saving.',
